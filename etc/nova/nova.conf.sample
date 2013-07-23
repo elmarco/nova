@@ -597,6 +597,17 @@
 # value)
 #spicehtml5proxy_port=6082
 
+#
+# Options defined in nova.cmd.spicehtml5proxy
+#
+
+# Host on which to listen for incoming requests (string value)
+#spicehttpproxy_host=0.0.0.0
+
+# Port on which to listen for incoming requests (integer
+# value)
+#spicehttpproxy_port=6083
+
 
 #
 # Options defined in nova.compute.api
