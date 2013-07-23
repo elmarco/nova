@@ -25,6 +25,10 @@ spice_opts = [
                default='http://127.0.0.1:6082/spice_auto.html',
                help='location of spice html5 console proxy, in the form '
                     '"http://127.0.0.1:6082/spice_auto.html"'),
+    cfg.StrOpt('httpproxy_base_url',
+               default='http://127.0.0.1:6083/',
+               help='location of spice http console proxy, in the form '
+                    '"http://127.0.0.1:6083/"'),
     cfg.StrOpt('server_listen',
                default='127.0.0.1',
                help='IP address on which instance spice server should listen'),

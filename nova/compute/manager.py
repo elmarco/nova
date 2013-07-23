@@ -3311,7 +3311,9 @@ class ComputeManager(manager.SchedulerDependentManager):
         if not CONF.spice.enabled:
             raise exception.ConsoleTypeInvalid(console_type=console_type)
 
-        if console_type == 'spice-html5':
+        if console_type == 'spice-http-proxy':
+            access_url = '%s?token=%s' % (CONF.spice.httpproxy_base_url, token)
+        elif console_type == 'spice-html5':
             # For essex, spicehtml5proxy_base_url must include the full path
             # including the html file (like http://myhost/spice_auto.html)
             access_url = '%s?token=%s' % (CONF.spice.html5proxy_base_url,
